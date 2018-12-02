@@ -1,0 +1,95 @@
+<!--
+  Generated template for the ConversaPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header no-padding>
+  <ion-navbar no-padding color="transparent">
+    <ion-title no-padding style="font-family: 'Baumans',cursive;font-size: 20px;color:#243343;">@ApelidoProfissional</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="novaConversa()">
+        <ion-icon name="add-circle"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content style="background: linear-gradient(141deg, #f1f1f1 0%, #e0e0e0 31%, #e1eadf 75%);">
+  <div padding>
+    <p class="balaopro">
+      testando testando testando testando testando
+    </p>
+
+    <p class="balaocli">
+      testando
+    </p>
+
+    <p class="balaocli">
+      testando testando
+    </p>
+    <p class="balaocli">
+      testando testando testando testando testando
+    </p>
+
+    <p class="balaopro">
+      testando testando testando testando testando
+    </p>
+  </div>
+
+  <ion-list>
+    <ion-item *ngFor="let chat of chats" no-lines>
+      <div class="chat-status" text-center *ngIf="chat.type==='join'||chat.type==='exit';else message">
+        <span class="chat-date">{{chat.sendDate | date:'short'}}</span>
+        <span class="chat-content-center">{{chat.message}}</span>
+      </div>
+      <ng-template #message>
+        <div class="chat-message" text-right *ngIf="chat.user === nickname">
+          <div class="right-bubble">
+            <span class="msg-name">Me</span>
+            <span class="msg-date">{{chat.sendDate | date:'short'}}</span>
+            <p text-wrap>{{chat.message}}</p>
+          </div>
+        </div>
+        <div class="chat-message" text-left *ngIf="chat.user !== nickname">
+          <div class="left-bubble">
+            <span class="msg-name">{{chat.user}}</span>
+            <span class="msg-date">{{chat.sendDate | date:'short'}}</span>
+            <p text-wrap>{{chat.message}}</p>
+          </div>
+        </div>
+      </ng-template>
+    </ion-item>
+  </ion-list>
+</ion-content>
+
+<ion-footer color="transparent">
+  <ion-toolbar color="transparent">
+
+      <ion-grid>
+          <ion-row>
+            <ion-col col-10>
+              <ion-input type="text" placeholder="Type a message" [(ngModel)]="data.message" name="message"></ion-input>
+            </ion-col>
+            <ion-col col-2 (click)="sendMessage()">
+              <ion-icon name="paper-plane"></ion-icon>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+
+    <ion-item color="transparent" style="border-bottom:none;">
+      <ion-textarea #mensagem id="mensagem" rows="1" maxLength="500" (keyup)="resize()" [(ngModel)]="texto" round
+        text-left type="text" style="border: 1px solid #e1eadf;border-radius: 15px 5px 15px 5px;;background:white;border-bottom:none;"
+        placeholder="Escreva aqui..."></ion-textarea>
+      </ion-item>
+      <ion-buttons end>
+        <button ion-button icon-end color="vermelho2">
+          <ion-icon name="send"></ion-icon>
+        </button>
+      </ion-buttons>
+
+  </ion-toolbar>
+</ion-footer>
+
+

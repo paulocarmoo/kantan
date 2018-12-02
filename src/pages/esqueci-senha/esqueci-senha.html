@@ -1,0 +1,132 @@
+<!--
+  Generated template for the CriarDadosPessoaisPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+
+
+
+<style type="text/css">
+  .swiper-pagination swiper-pagination-clickable swiper-pagination-bullets {
+    display: none;
+  }
+</style>
+<link href="https://fonts.googleapis.com/css?family=Baumans" rel="stylesheet">
+
+<ion-header>
+
+  <ion-navbar color="vermelho">
+    <b>
+      <ion-title class="navInitial" style="font-family: 'Baumans',cursive;font-size: 28px;">Criando conta</ion-title>
+    </b>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content class="img">
+
+  <body class="bodyCadastrar">
+    <div>
+      <ion-slides pager style="width:95%;margin: auto;padding-top:20px;">
+        <ion-slide style="border-radius: 15px 40px 15px 40px;background-color: #ffff;color:#243343;height: 100%;">
+          <p padding style="color:#3a424b;font-size: 17px;">
+            Primeiro precisamos localizar sua conta.
+          </p>
+          <ion-list inset>
+            <ion-item>
+              <ion-label>CPF</ion-label>
+              <ion-input type="numeric"></ion-input>
+            </ion-item>
+
+            <br>
+            <br>
+            <button ion-button large (click)="proximo()" style="width:60%;font-family: 'Baumans', cursive;background:linear-gradient(to bottom right, #ef1a1ae6, #e24c47)"
+              class="botoes_inicio" round>Continuar</button><br>
+            <button ion-button round (click)="goToOpcoesInicial()" outline small color="vermelho">Cancelar</button>
+            <br>
+          </ion-list>
+        </ion-slide>
+
+        <ion-slide style="border-radius: 15px 40px 15px 40px;background-color: #ffff;color:#243343;height: 100%;">
+          <p padding style="color:#3a424b;font-size: 17px;">
+            Agora, precisamos confirmar que você é você.
+          </p>
+          <ion-list inset>
+
+
+            <ion-item>
+              <ion-label>Sobrenome</ion-label>
+              <ion-input style="width: 90%; text-align: center" type="text"></ion-input>
+            </ion-item>
+
+            <ion-item>
+              <ion-label>Bairro</ion-label>
+              <ion-input style="width: 95%; text-align: center" type="text"></ion-input>
+            </ion-item>
+
+            <ion-item>
+              <ion-label no-padding>Nascimento</ion-label>
+              <ion-datetime displayFormat="DD/MMM/YYYY" [(ngModel)]="event.endsDate"></ion-datetime>
+            </ion-item>
+
+            <ion-item>
+              <ion-label>Cidade</ion-label>
+              <ion-select style="width: 95%" [(ngModel)]="Cidade" interface="action-sheet">
+                <ion-option style="text-align: right" value="SP">São Paulo</ion-option>
+                <ion-option style="text-align: right" value="FLO">Florianópolis</ion-option>
+                <ion-option style="text-align: right" value="CTBA">Curitiba</ion-option>
+              </ion-select>
+            </ion-item>
+
+            <ion-item>
+              <ion-label>Bairro</ion-label>
+              <ion-input style="width: 90%; text-align: center" type="text"></ion-input>
+            </ion-item>
+          </ion-list>
+
+
+
+          <br>
+          <br>
+          <button ion-button large (click)="proximo()" style="width:60%;font-family: 'Baumans', cursive;background:linear-gradient(to bottom right, #ef1a1ae6, #e24c47)"
+            class="botoes_inicio" round>Continuar</button><br>
+          <button ion-button (click)="voltar()" round outline small color="vermelho">voltar</button>
+          <br>
+          <br>
+        </ion-slide>
+
+        <ion-slide style="border-radius: 15px 40px 15px 40px;background-color: #ffff;color:#243343;height: 100%;">
+          <p padding style="color:#3a424b;font-size: 17px;">
+            Tudo certo até agora, então é só digitar sua nova senha.</p>
+          <ion-list inset>
+            <ion-item>
+              <ion-label>Nova senha</ion-label>
+              <ion-input style="width: 90%; text-align: center" type="texto"></ion-input>
+            </ion-item>
+
+            <ion-item>
+              <ion-label>Confirmar senha</ion-label>
+              <ion-input style="width: 90%; text-align: center" type="texto"></ion-input>
+            </ion-item>
+          </ion-list>
+
+
+          <br>
+          <br>
+
+
+          <button ion-button large (click)="salvarSenha()" style="width:60%;font-family: 'Baumans', cursive;background:linear-gradient(to bottom right, #ef1a1ae6, #e24c47)"
+            class="botoes_inicio" round>Salvar</button><br>
+          <button ion-button (click)="goToOpcoesInicial()" round outline small color="vermelho">Cancelar</button>
+          <br>
+          <br>
+
+        </ion-slide>
+
+      </ion-slides>
+
+
+    </div>
+  </body>
+</ion-content>

@@ -1,0 +1,102 @@
+<!--
+  Generated template for the HistoricoPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<link href="https://fonts.googleapis.com/css?family=Baumans" rel="stylesheet">
+<ion-header>
+
+  <ion-navbar color="transparent">
+    <ion-title style="color:#243343;font-family: 'Baumans',cursive;font-size: 28px;">Histórico</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content class="bodyAreaInterna">
+
+  <h2 padding-left>
+    Pendentes de avaliação
+  </h2>
+  <ion-card class="card" (click)="detalheservico()">
+      <ion-item class="itemcard">
+          <ion-icon name="contact" color="vermelho2" item-start></ion-icon>
+          <p floating>Profissional</p>
+          <h3 type="text">@apelidodoprofissional</h3>
+        </ion-item>
+    
+        <ion-item class="itemcard">
+            <ion-icon name="calendar" color="preto" item-start></ion-icon>
+            <p floating>Data de início/uso</p>
+            <h3 type="text">00/00/00</h3>
+          </ion-item>
+
+          <ion-item class="itemcard">
+              <ion-icon name="cash" color="verde" item-start></ion-icon>
+              <p floating>Valor gasto</p>
+              <h3 type="text">R$ 100,00</h3>
+            </ion-item>
+
+
+  <ion-card-content class="itemcard">
+    <p>Um resumo do serviço que o cliete pediu para que ele lembre do serviço de forma fácil.</p>
+  </ion-card-content>
+  </ion-card>
+
+  <h2 padding-left>
+    Trabalhando
+  </h2>
+  <ion-card class="card">
+      <ion-item class="itemcard">
+          <ion-icon name="contact" color="vermelho2" item-start></ion-icon>
+          <p floating>Profissional</p>
+          <h3 type="text">@apelidodoprofissional</h3>
+        </ion-item>
+    
+        <ion-item class="itemcard">
+            <ion-icon name="calendar" color="preto" item-start></ion-icon>
+            <p floating>Data de início/uso</p>
+            <h3 type="text">00/00/00</h3>
+          </ion-item>
+
+
+  <ion-card-content class="itemcard">
+    <p>Um resumo do serviço que o cliete pediu para que ele lembre do serviço de forma fácil.</p>
+  </ion-card-content>
+  </ion-card>
+
+
+  <h2 padding-left>
+    Finalizados
+  </h2>
+
+  <ion-card class="card">
+        <ion-item class="itemcard">
+            <ion-icon name="contact" color="vermelho2" item-start></ion-icon>
+            <p floating>Profissional</p>
+            <h3 type="text">@apelidodoprofissional</h3>
+          </ion-item>
+      
+          <ion-item class="itemcard">
+              <ion-icon name="calendar" color="preto" item-start></ion-icon>
+              <p floating>Data de início/uso</p>
+              <h3 type="text">00/00/00</h3>
+            </ion-item>
+
+            <ion-item class="itemcard">
+                <ion-icon name="cash" color="verde" item-start></ion-icon>
+                <p floating>Valor gasto</p>
+                <h3 type="text">R$ 100,00</h3>
+              </ion-item>
+
+              <ion-item class="itemcard">
+                  <ion-icon name="pricetag" color="laranja" item-start></ion-icon>
+                  <p floating>Avaliação</p>
+                  <h3 type="text">5⭐ - Recomendado</h3>
+                </ion-item>
+
+    <ion-card-content class="itemcard">
+      <p>Um resumo do serviço que o cliete pediu para que ele lembre do serviço de forma fácil.</p>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

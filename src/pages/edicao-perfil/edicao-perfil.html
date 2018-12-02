@@ -1,0 +1,92 @@
+<!--
+  Generated template for the EdicaoPerfilPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar color="transparent">
+      <ion-title style="color:#243343;font-family: 'Baumans',cursive;font-size: 28px;">Alterar</ion-title>
+      <ion-buttons end>
+          <button (click)="presentActionSheet()" ion-button icon-only>
+            <ion-icon  name="more"></ion-icon>
+          </button>
+        </ion-buttons>
+        
+      </ion-navbar>
+      
+    
+</ion-header>
+
+<ion-content class="bodyAreaInterna">
+
+    <ion-item no-lines padding-left color="transparent" style="border: none;">
+        <ion-thumbnail large item-start>
+          <img style="width: 110px;height: 110px;border-radius:7px 21px 7px 21px;" src="assets/icones/perfil.png">
+        </ion-thumbnail>
+      
+      </ion-item>
+    <ion-list inset>
+
+        <ion-item color="transparent">
+            <ion-icon name="document" color="azul" item-start></ion-icon>
+            <ion-label>CPF</ion-label>
+            <ion-input type="texto" disabled></ion-input>
+          </ion-item>
+
+        <ion-item color="transparent">
+            <ion-icon name="contact" color="vermelho2" item-start></ion-icon>
+          <ion-label>Nome</ion-label>
+          <ion-input type="text" disabled>Nome</ion-input>
+        </ion-item>
+
+        <ion-item color="transparent">
+            <ion-icon name="contacts" color="vermelho2" item-start></ion-icon>
+          <ion-label>Sobrenome</ion-label>
+          <ion-input type="text">Usuário</ion-input>
+        </ion-item>
+
+        <ion-item color="transparent">
+            <ion-icon name="calendar" color="preto" item-start></ion-icon>
+          <ion-label no-padding>Nascimento</ion-label>
+          <ion-input type="text"></ion-input>
+        </ion-item>
+
+        
+
+          <ion-item color="transparent">
+              <ion-icon name="at" item-start color="verde"></ion-icon>
+              <ion-label>E-mail</ion-label>
+              <ion-input type="text"></ion-input>
+            </ion-item>
+            
+            <ion-item color="transparent">
+                <ion-icon name="call" color="rosa" item-start></ion-icon>
+            <ion-label>Telefone</ion-label>
+            <ion-input type="text"></ion-input>
+          </ion-item>
+
+        <ion-item color="transparent">
+            <ion-icon name="navigate" color="laranja" item-start></ion-icon>
+            <ion-label>Cidade</ion-label>
+            <ion-input type="text"></ion-input>
+          </ion-item>
+
+          <ion-item color="transparent">
+              <ion-icon name="locate" color="roxo" item-start></ion-icon>
+              <ion-label>Bairro</ion-label>
+              <ion-input type="text"></ion-input>
+            </ion-item>
+      </ion-list>
+
+      <br>
+          <br>
+          <p style="text-align:center;">
+          <button ion-button (click)="salvar('top')" medium style="margin: 10px;;width:60%;font-family: 'Baumans', cursive;background: #e24c47;"
+            class="botoes_inicio" round>Salvar</button><br>
+          <button ion-button round (click)="trocarsenha()" outline small color="vermelho" style="margin:auto;">Trocar senha</button>
+          </p>
+          <br>
+          <br>
+
+</ion-content>

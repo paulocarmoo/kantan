@@ -1,0 +1,120 @@
+<!--
+  Generated template for the CadastrarServicoPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="transparent">
+    <ion-title style="color:#243343;font-family: 'Baumans',cursive;font-size: 28px;">Novo serviço</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content class="bodyAreaInterna">
+  <ion-slides>
+    <ion-slide style="height: 100%;">
+
+      <ion-card class="card">
+        <ion-card-content class="itemcard">
+          <p padding style="color:#243343 ;font-size: 17px;">
+            Serviços à contratar</p>
+          <ion-list>
+            <ion-item color="transparent">
+              <ion-icon name="radio-button-on" color="preto" item-start></ion-icon>
+              <ion-label>Chaveiro</ion-label>
+              <ion-checkbox color="preto" value="chaveiro"></ion-checkbox>
+            </ion-item>
+
+            <ion-item color="transparent">
+              <ion-icon name="radio-button-on" color="verde" item-start></ion-icon>
+              <ion-label>Gesseiro</ion-label>
+              <ion-checkbox color="verde" value="chaveiro"></ion-checkbox>
+            </ion-item>
+
+
+            <ion-item color="transparent">
+              <ion-icon name="radio-button-on" color="rosa" item-start></ion-icon>
+              <ion-label>Encanador</ion-label>
+              <ion-checkbox color="rosa" value="chaveiro"></ion-checkbox>
+            </ion-item>
+
+            <ion-item color="transparent">
+              <ion-icon name="radio-button-on" color="laranja" item-start></ion-icon>
+              <ion-label>Jardineiro</ion-label>
+              <ion-checkbox color="laranja" value="chaveiro"></ion-checkbox>
+            </ion-item>
+          </ion-list>
+          <br>
+          <br>
+
+          <button ion-button large (click)="proximoslide2()" style="width:60%;font-family: 'Baumans', cursive;background:linear-gradient(to bottom right, #ef1a1ae6, #e24c47)"
+            class="botoes_inicio" round>Continuar</button><br>
+          <button ion-button (click)="cancelar()" round outline small color="vermelho">cancelar</button>
+          <br>
+          <br>
+        </ion-card-content>
+      </ion-card>
+    </ion-slide>
+    <ion-slide style="height: 100%;">
+
+      <ion-card class="card">
+          <ion-card-content class="itemcard">
+          <p padding style="color:#243343 ;font-size: 17px;">
+              Descrição</p>
+       
+            <ion-textarea rows="4" maxLength="500" [(ngModel)]="descricao" round
+            text-left type="text" style="border: 1px solid #e1eadf;border-radius: 15px 5px 15px 5px;;background:white;border-bottom:none;"
+            placeholder="Uma descrição do serviço feita por você..."></ion-textarea>
+            <br>
+          <button ion-button large (click)="proximoslide3()" style="width:60%;font-family: 'Baumans', cursive;background:linear-gradient(to bottom right, #ef1a1ae6, #e24c47)"
+            class="botoes_inicio" round>Continuar</button><br>
+          <button ion-button (click)="voltar()" round outline small color="vermelho">voltar</button>
+          <br>
+          <br>
+        </ion-card-content>
+      </ion-card>
+    </ion-slide>
+
+      <ion-slide style="height: 100%;">
+
+        <ion-card class="card">
+          <ion-card-content class="itemcard">
+              <p padding style="color:#243343 ;font-size: 17px;">
+                  Mais algumas informações</p>
+                  <ion-list inset>
+              <ion-item color="transparent">
+                  <ion-icon name="cash" color="verde" item-start></ion-icon>
+                <ion-label>Valor combinado/custo</ion-label>
+                <ion-input type="text"></ion-input>
+              </ion-item>
+      
+
+              <ion-item color="transparent">
+                  <ion-icon name="calendar" color="preto" item-start></ion-icon>
+                <ion-label no-padding>Data de inicio/uso</ion-label>
+                <ion-datetime displayFormat="DD/MMM/YYYY" [(ngModel)]="event.endsDate"></ion-datetime>
+              </ion-item>
+
+              <ion-item color="transparent">
+                  <ion-icon name="calendar" color="preto" item-start></ion-icon>
+                <ion-label no-padding>Previsão de término</ion-label>
+                <ion-datetime displayFormat="DD/MMM/YYYY" [(ngModel)]="event.endsDate"></ion-datetime>
+              </ion-item>
+            </ion-list>
+            <br>
+            <button ion-button large (click)="salvarservico('top')" style="width:60%;font-family: 'Baumans', cursive;background:linear-gradient(to bottom right, #ef1a1ae6, #e24c47)"
+              class="botoes_inicio" round>Salvar</button><br>
+            <button ion-button (click)="voltar()" round outline small color="vermelho">voltar</button>
+            <br>
+            <br>
+          </ion-card-content>
+        </ion-card>
+
+      </ion-slide>
+
+      
+  </ion-slides>
+</ion-content>

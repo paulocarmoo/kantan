@@ -1,0 +1,64 @@
+<!--
+  Generated template for the OpcoesInicialPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+
+
+<link href="https://fonts.googleapis.com/css?family=Baumans" rel="stylesheet">
+<ion-content class="img">
+
+  <body id="bodyopcoes">
+
+        <div id=slides style="height:75%;vertical-align: middle;">   
+      <ion-slides pager effect="coverflow" autoplay="4000" loop="true" style="width:95%;margin: auto;padding-top:30px;">
+        <ion-slide (click)="proximo()" style="border-radius: 15px 40px 15px 40px;background-color: #f4f6f3;color:#243343;height: 100%;">
+        <h1 style="max-width:100%;margin: auto;"><img src="../assets/Icones/Inicial1.png" alt=""/></h1>
+          <h2>Olá, você está no <h2 style="font-family:'Baumans',cursive;display: inline;font-size: 30px"><b>Kantan</b>:</h2></h2>
+          <h3 padding style="color:#3a424b;font-size: 18px;">O aplicativo para encontrar pessoas com atributos difíceis de se achar.</h3>
+          <footer (click)="proximo()" padding style="position:absolute;bottom:0;color:#616364;margin: auto;font-size: 13px;width: 100%;">Conheça ☛<br></footer>
+        </ion-slide>
+
+        <ion-slide (click)="proximo()" style="border-radius: 15px 40px 15px 40px;background-color: #f4f6f3;color:#243343;height: 100%;">
+            <h1 style="max-width:100%;margin: auto;"><img src="../assets/Icones/inicio.png" alt=""/></h1>
+          <h3 padding style="color:#3a424b;font-size: 18px;"><b>Encontre</b>, <b>contrate</b> e <b>avalie</b> milhares de profissionais autônomos do ramo de construção em poucos cliques.</h3>
+          <footer (click)="proximo()" padding style="position:absolute;bottom:0;color:#616364;margin: auto;font-size: 13px;width: 100%;">Arraste ☛<br></footer>
+        </ion-slide> 
+
+        <ion-slide (click)="proximo()" style="border-radius: 15px 40px 15px 40px;background-color: #f4f6f3;color:#243343;height: 100%;">
+            <h1 style="max-width:100%;margin: auto;"><img src="../assets/Icones/comentario1.png" alt=""/></h1>
+          <h3 padding style="color:#3a424b;font-size: 18px;"><b>Faça comentários</b> sobre os serviços prestados e <b>ajude</b> outras pessoas que procuram o mesmo que você.</h3>
+          <footer (click)="proximo()" padding style="position:absolute;bottom:0;color:#616364;margin: auto;font-size: 13px;width: 100%;">Continue ☛<br></footer>
+        
+        </ion-slide> 
+
+        <ion-slide (click)="primeiro()" style="border-radius: 15px 40px 15px 40px;background-color: #f4f6f3;color:#243343;height: 100%;">
+            <h1 style="max-width:30%;margin: auto;"><img src="../assets/Icones/dinheiro.png" alt=""/></h1>
+          <h3 padding style="color:#3a424b;font-size: 18px;">E não pague nada para usar nosso aplicativo!*<br><br>Entre ou crie sua conta já </h3>
+          <br><br><br>
+          <footer  padding style="position:absolute;bottom:0;color:#3a424b;margin: auto;font-size: 13px; text-align: center;">Ao utilizar nossos serviços você concorda com os nossos Termos e Condições.<br>
+          *Valores de serviços negociados e pagos diretamente ao profissional.</footer>
+        </ion-slide>
+      </ion-slides>
+    </div> 
+      <div class="opcoes"> 
+      <table style="width:100%;">
+        <tbody>
+          <tr>
+            <td><br>
+              <br>
+              <button ion-button large (click)="goToCriarDadosPessoaisPage()" style="width:40%;font-family: 'Baumans', cursive;background: linear-gradient(to bottom right, #e24c47e0, #e24c47);"
+                class="botoes_inicio" round>Criar conta</button>
+              <button ion-button large (click)="goToLoginPage()" style="width:40%;font-family: 'Baumans', cursive;background: linear-gradient(to bottom right, #e24c47e0, #e24c47);"
+                class="botoes_inicio" round>Entrar</button>
+              <br><br>
+              <p style="border-color: #e1eadf;color:#e1eadf;border:solid;border-width: 1px 0px 0px 0px;padding: 5px;width:80%;margin: auto;">Kantan
+                Dev Group</p>
+            </td>
+          </tr>
+        </tbody>
+      </table>   
+    </div> 
+  </body>
+</ion-content>

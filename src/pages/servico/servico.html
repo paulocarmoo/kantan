@@ -1,0 +1,115 @@
+<!--
+  Generated template for the HistoricoPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<link href="https://fonts.googleapis.com/css?family=Baumans" rel="stylesheet">
+<ion-header>
+
+  <ion-navbar color="transparent">
+    <ion-title style="color:#243343;font-family: 'Baumans',cursive;font-size: 28px;">Detalhes do serviço</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content class="bodyAreaInterna">
+
+  <h2 padding-left>
+    Descrição
+  </h2>
+
+  <ion-card>
+    <ion-card-content class="itemcard">
+      <p>Um resumo do serviço que o cliete pediu para que ele lembre do serviço de forma fácil.</p>
+    </ion-card-content>
+  </ion-card>
+
+  <h2 padding-left>
+    Serviço(s) contratado(s)
+  </h2>
+  <ion-card class="card">
+    <ion-item class="itemcard">
+      <ion-list>
+        <button color="transparent" ion-item>
+          <ion-icon name="radio-button-on" color="preto" item-start></ion-icon>
+          Chaveiro
+        </button>
+
+        <button color="transparent" ion-item>
+          <ion-icon name="radio-button-on" color="verde" item-start></ion-icon>
+          Encanador
+        </button>
+
+
+        <button color="transparent" ion-item>
+          <ion-icon name="radio-button-on" color="rosa" item-start></ion-icon>
+          Gesseiro
+        </button>
+
+        <button color="transparent" ion-item>
+          <ion-icon name="radio-button-on" color="laranja" item-start></ion-icon>
+          Jardineiro
+        </button>
+      </ion-list>
+    </ion-item>
+  </ion-card>
+
+  <h2 padding-left>
+    Informações gerais
+  </h2>
+
+  <ion-card class="card">
+      <ion-item class="itemcard">
+        <ion-icon name="contact" color="vermelho2" item-start></ion-icon>
+        <p floating>Profissional</p>
+        <h3 type="text">@apelidodoprofissional</h3>
+      </ion-item>
+  
+      <ion-item class="itemcard">
+        <ion-icon name="calendar" color="preto" item-start></ion-icon>
+        <p floating>Data de início/uso</p>
+        <h3 type="text">00/00/00</h3>
+      </ion-item>
+
+      <ion-item class="itemcard">
+          <ion-icon name="calendar" color="preto" item-start></ion-icon>
+          <p floating>Data de término</p>
+          <h3 type="text">00/00/00</h3>
+        </ion-item>
+  
+      <ion-item class="itemcard">
+        <ion-icon name="cash" color="verde" item-start></ion-icon>
+        <p floating>Valor gasto</p>
+        <h3 type="text">R$ 100,00</h3>
+      </ion-item>
+  
+</ion-card>
+  <h2 padding-left>
+    Avaliação
+  </h2>
+
+  
+<ion-card>
+    <ion-item class="itemcard">
+      <ion-icon name="star" color="amarelo" item-start></ion-icon>
+      <p floating>Nota</p>
+      <h3 type="text">5⭐</h3>
+    </ion-item>
+    <ion-item class="itemcard">
+        <ion-icon name="thumbs-up" color="azul" item-start></ion-icon>
+        <p floating>Recomendação</p>
+        <h3 type="text">Recomendado</h3>
+      </ion-item>
+      <ion-card-content class="itemcard">
+          <p floating><ion-icon name="text" color="preto" item-start></ion-icon> Comentário</p>
+          <p type="text">Um breve comentário do cliente pelo serviço com uma quantidade razoável de cacteres.</p>
+        </ion-card-content>
+  </ion-card>
+
+  <p style="text-align:center;">
+      <button ion-button (click)="avaliar()" medium style="margin: 10px;;width:60%;font-family: 'Baumans', cursive;background: #e24c47;"
+        class="botoes_inicio" round>Avaliar</button><br>
+        </p>
+
+</ion-content>

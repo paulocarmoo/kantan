@@ -1,0 +1,45 @@
+<!--
+  Generated template for the AvaliarServicoPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar color="transparent">
+    <ion-title style="font-family: 'Baumans',cursive;">Avaliação do serviço</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+
+<ion-content class="bodyAreaInterna">
+
+  <p style="padding-top:100px;"></p>
+  <ion-card class="card">
+    <ion-card-content class="itemcard">
+        <p padding style="color:#243343 ;font-size: 17px;">
+            Avaliando um serviço você está ajudando as pessoas que procuram o mesmo que você.</p>
+      <ion-item color="transparent">
+        <ion-range min="1" max="5" step="1" pin="true" snaps="true" [(ngModel)]="nota" color="preto">
+          <ion-icon range-left small>1⭐</ion-icon>
+          <ion-icon range-right>5⭐</ion-icon>
+        </ion-range>
+      </ion-item>
+
+      <ion-card (tap)="tapEvent($event)" style="margin-left: 0px;margin-right: 0px;border-radius: 15px 5px 15px 5px;;background:white;width: 100%;">
+        <ion-item class="recomendacao">
+          {{tap}}
+        </ion-item>
+      </ion-card>
+
+      <ion-textarea rows="4" maxLength="500" [(ngModel)]="descricao" round text-left type="text" style="border: 1px solid #e1eadf;border-radius: 15px 5px 15px 5px;;background:white;border-bottom:none;"
+        placeholder="Faça um comentário sobre esse serviço..."></ion-textarea>
+      <br>
+      <p style="text-align:center;">
+        <button ion-button large (click)="salvaravalicao('top')" style="width:60%;font-family: 'Baumans', cursive;background:linear-gradient(to bottom right, #ef1a1ae6, #e24c47)"
+          class="botoes_inicio" round>Continuar</button><br>
+      </p>
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>

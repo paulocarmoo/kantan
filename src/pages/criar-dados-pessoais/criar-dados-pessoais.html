@@ -1,0 +1,191 @@
+<!--
+  Generated template for the CriarDadosPessoaisPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+
+
+
+<style type="text/css">
+  .swiper-pagination swiper-pagination-clickable swiper-pagination-bullets {
+    display: none;
+  }
+</style>
+<link href="https://fonts.googleapis.com/css?family=Baumans" rel="stylesheet">
+
+<ion-header>
+
+  <ion-navbar color="vermelho">
+    <b>
+      <ion-title class="navInitial" style="font-family: 'Baumans',cursive;font-size: 28px;">Criando conta</ion-title>
+    </b>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content class="img">
+
+  <body class="bodyCadastrar">
+    <div>
+      <ion-slides  pager style="width:95%;margin: auto;padding-top:20px;">
+        <ion-slide style="border-radius: 15px 40px 15px 40px;background-color: #f4f6f3;color:#243343;height: 100%;">
+          <p padding style="color:#3a424b;font-size: 17px;">
+            Primeiro, vamos falar um pouquinho de você. São só algumas informações, mas é importante preencher
+            corretamente.
+          </p>
+          <ion-list inset>
+            <ion-item color="transparent">
+              <ion-label>Nome</ion-label>
+              <ion-input type="text" placeholder="Ex.: Alan"></ion-input>
+            </ion-item>
+
+            <ion-item color="transparent">
+              <ion-label>Sobrenome</ion-label>
+              <ion-input type="text" placeholder="Ex.: Turing"></ion-input>
+            </ion-item>
+
+            <ion-item color="transparent">
+              <ion-label no-padding>Nascimento</ion-label>
+              <ion-datetime displayFormat="DD/MMM/YYYY" [(ngModel)]="event.endsDate" placeholder="Ex: 23/12/1912"></ion-datetime>
+            </ion-item>
+
+            <ion-item color="transparent">
+              <ion-label>CPF</ion-label>
+              <ion-input type="texto" placeholder="Ex: 123.321.321-31"></ion-input>
+            </ion-item>
+          </ion-list>
+
+
+          <br>
+          <br>
+          <button ion-button large (click)="proximoslide2()" style="width:60%;font-family: 'Baumans', cursive;background:linear-gradient(to bottom right, #ef1a1ae6, #e24c47)"
+            class="botoes_inicio" round>Continuar</button>
+          <br>
+          <br>
+        </ion-slide>
+
+        <ion-slide style="border-radius: 15px 40px 15px 40px;background-color: #f4f6f3;color:#243343;height: 100%;">
+          <p padding style="color:#3a424b;font-size: 17px;">
+            Precisamos saber de onde você é para localizarmos os profissionais do Kantan nas redondezas.
+          </p>
+          <ion-list inset>
+            <ion-item color="transparent">
+              <ion-label>Cidade</ion-label>
+              <ion-select style="width: 95%" [(ngModel)]="Cidade" interface="action-sheet">
+                <ion-option style="text-align: right" value="SP">São Paulo</ion-option>
+                <ion-option style="text-align: right" value="FLO">Florianópolis</ion-option>
+                <ion-option style="text-align: right" value="CTBA">Curitiba</ion-option>
+              </ion-select>
+            </ion-item >
+
+            <ion-item color="transparent">
+              <ion-label>Bairro</ion-label>
+              <ion-input style="width: 90%; text-align: center" type="text"></ion-input>
+            </ion-item>
+          </ion-list>
+
+
+
+          <br>
+          <br>
+          <button ion-button large (click)="proximoslide3()" style="width:60%;font-family: 'Baumans', cursive;background:linear-gradient(to bottom right, #ef1a1ae6, #e24c47)"
+            class="botoes_inicio" round>Continuar</button><br>
+          <button ion-button (click)="voltar()" round outline small color="vermelho">voltar</button>
+          <br>
+          <br>
+        </ion-slide>
+
+        <ion-slide style="border-radius: 15px 40px 15px 40px;background-color: #f4f6f3;color:#243343;height: 100%;">
+          <p padding style="color:#3a424b;font-size: 17px;">
+            Preencha as formas de contato e dessa forma melhora a comunicação com o profissional do Kantan, aliás, você fará seus logins pelo e-mail.</p>
+          <ion-list inset>
+            <ion-item color="transparent">
+              <ion-label>E-mail</ion-label>
+              <ion-input style="width: 90%; text-align: center" type="texto" placeholder="Ex: meu@email.com"></ion-input>
+            </ion-item>
+
+            <ion-item color="transparent">
+              <ion-label>Telefone</ion-label>
+              <ion-input style="width: 90%; text-align: center" type="texto" placeholder="Ex: (00) 12345-1234"></ion-input>
+            </ion-item>
+          </ion-list>
+
+
+          <br>
+          <br>
+
+
+          <button ion-button large (click)="proximoslide4()" style="width:60%;font-family: 'Baumans', cursive;background:linear-gradient(to bottom right, #ef1a1ae6, #e24c47)"
+            class="botoes_inicio" round>Continuar</button><br>
+          <button ion-button (click)="voltar()" round outline small color="vermelho">voltar</button>
+          <br>
+          <br>
+
+        </ion-slide>
+
+        <ion-slide style="border-radius: 15px 40px 15px 40px;background-color: #f4f6f3;color:#243343;height: 100%;">
+          <p padding style="color:#3a424b;font-size: 17px;">
+            Cadastre uma senha.</p>
+          <ion-list inset>
+            <ion-item color="transparent">
+              <ion-label>Senha</ion-label>
+              <ion-input style="width: 90%; text-align: center" type="password"></ion-input>
+            </ion-item>
+            <ion-item color="transparent">
+              <ion-label>Confirmar senha</ion-label>
+
+              <ion-input style="width: 90%; text-align: center" type="password"></ion-input>
+
+            </ion-item>
+          </ion-list>
+
+          <br>
+          <br>
+          <button ion-button large (click)="proximoslide5()" style="width:60%;font-family: 'Baumans', cursive;background:linear-gradient(to bottom right, #ef1a1ae6, #e24c47)"
+            class="botoes_inicio" round>Continuar</button><br>
+          <button ion-button (click)="voltar()" round outline small color="vermelho">voltar</button>
+          <br>
+          <br>
+
+        </ion-slide>
+
+        <ion-slide style="border-radius: 15px 40px 15px 40px;background-color: #f4f6f3;color:#243343;height: 100%;">
+
+          <p padding style="color:#3a424b;font-size: 17px;">
+            Leia os Termos e Condições antes de aceitá-los para garantir que tenha a melhor experiência no aplicativo,
+            ok?
+          </p>
+          <br>
+          <ion-list inset>
+            <a href="">Termos e Condições</a>
+
+
+            <br>
+            <br>
+            <ion-item color="transparent">
+              <ion-label>Concordo que li e aceito.</ion-label>
+              <ion-checkbox color="vermelho" [(ngModel)]="S"></ion-checkbox>
+            </ion-item>
+
+          </ion-list>
+          <br>
+          <br>
+          <button ion-button large (click)="goToTabsPage('top')" style="width:60%;font-family: 'Baumans', cursive;background:linear-gradient(to bottom right, #ef1a1ae6, #e24c47)"
+            class="botoes_inicio" round>Continuar</button><br>
+          <button ion-button  (click)="voltar()" round outline small color="vermelho">voltar</button>
+          <br>
+          <br>
+
+        </ion-slide>
+
+      </ion-slides>
+
+
+    </div>
+    <br>
+    <footer style="text-align: center;">
+      <img width="100px" src="../assets/Icones/Logo vazado.png" alt="">
+    </footer>
+  </body>
+</ion-content>

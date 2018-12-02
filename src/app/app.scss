@@ -1,0 +1,267 @@
+// http://ionicframework.com/docs/theming/
+
+
+// App Global Sass
+// --------------------------------------------------
+// Put style rules here that you want to apply globally. These
+// styles are for the entire app and not just one component.
+// Additionally, this file can be also used as an entry point
+// to import other Sass files to be included in the output CSS.
+//
+// Shared Sass variables, which can be used to adjust Ionic's
+// default Sass variables, belong in "theme/variables.scss".
+//
+// To declare rules for a specific mode, create a child rule
+// for the .md, .ios, or .wp mode classes. The mode class is
+// automatically applied to the <body> element in the app.
+@import "../theme/icons";
+
+
+.tab-button[aria-selected=true] .tab-button-icon {
+    color:#e24c47;
+  }
+
+.botao{
+  background: #e24c47;
+  color:#f1f1f1;
+  font-family: 'Baumans',cursive;
+}
+
+h2{
+  font-size: 17px;
+  color: #243343;
+}
+.header-md::after, .tabs-md[tabsPlacement="top"] > .tabbar::after, .footer-md::before, .tabs-md[tabsPlacement="bottom"] > .tabbar::before {
+  display: none;
+}
+
+  .swiper-pagination-bullet-active {
+
+    display: none;
+}
+
+.swiper-pagination-bullet {
+
+  display: none;
+}
+.navInitial{
+  
+  color: #ffffff;
+  font-size: 26px;
+}
+
+.bar-button-default-md, .bar-button-clear-md-default, .bar-button-md-default {
+  background-color: transparent;
+}
+.tabs-md .tab-button[aria-selected=true] .tab-button-icon {
+  color: #e24c47;
+}
+.tabs-md .tab-button[aria-selected=true]{
+  color: #e24c47}
+
+  .tabs-ios .tab-button[aria-selected=true] .tab-button-icon {
+    color: #e24c47;
+  }
+  .tabs-ios .tab-button[aria-selected=true]{
+    color: #e24c47}
+
+.bar-button-default-ios, .bar-button-default.bar-button-ios-default, .bar-button-clear-ios-default {
+  background-color: transparent;
+}
+
+.navbarAreaInterna{
+  background: #ffffff;
+}
+
+.bodyAreaInterna{
+  background: linear-gradient(141deg, #f1f1f1 0%, #e0e0e0 31%, #e1eadf 75%);
+  color:#243343;
+}
+
+.navTitle{
+  color: #243343;
+}
+
+.img{
+  background:url('../assets/fundos/ferramentas.jpg') no-repeat center center ;
+  height: 100%;
+  left: 0;
+right: 0;
+z-index: -1;
+display: block;
+background-size:cover;
+}
+
+.imgperfil{
+  background:url('../assets/fundos/ferramentas.jpg') no-repeat center center ;
+  left: 0;
+right: 0;
+display: block;
+background-size:cover;
+}
+
+.imgchat{
+  background:url('../assets/fundos/ferramentas.jpg') no-repeat center center;
+  height: 100%;
+  left: 0;
+right: 0;
+z-index: 1;
+display: block;
+background-size:cover;
+display: block;
+}
+
+.imgLogin{
+  background:url('../assets/fundos/ferramentas.jpg') no-repeat center center fixed ;
+  height: 100%;
+  left: 0;
+right: 0;
+z-index: -1;
+display: block;
+background-size:cover;
+}
+
+.itemcard{
+  background:#ffffff9e;
+}
+
+.card{
+  background: transparent;
+  border:none;
+  border-radius:5px 15px 5px 15px;
+  box-shadow: none;
+}
+
+  .toolbar-md-vermelho .toolbar-background-md {
+  background:#e24c4799;
+  }
+
+  .toolbar-ios-vermelho .toolbar-background-ios  {
+  background:#e24c4799;
+}
+
+.toolbar-md-azulperfil .toolbar-background-md {
+  background: linear-gradient(to right,#1d7cb6e6, #2b94dd)
+  }
+
+  .toolbar-ios-azulperfil .toolbar-background-ios  {
+    background: linear-gradient(to right,#1d7cb6e6, #2b94dd)
+}
+
+.toolbar-md-vermelhoperfil .toolbar-background-md {
+  background: linear-gradient(to right,#e24c47e6, #e24c47);
+  }
+
+  .toolbar-ios-vermelhoperfil .toolbar-background-ios  {
+    background: linear-gradient(to right,#e24c47e6, #e24c47);
+}
+
+.toolbar-md-transparent .toolbar-title-md {
+  color:#243343;
+  }
+  .toolbar-md-transparent .bar-button-default-md{
+    color:#243343; 
+  }
+
+  .toolbar-ios-transparent .toolbar-title-ios  {
+    color:#243343;
+}
+.toolbar-ios-transparent .bar-button-default-ios{
+  color:#243343; 
+}
+
+//Android
+
+/*.item-md.item-input.item-input-has-focus .item-inner, .item-md.item-input.item-input-has-focus .item-inner{
+  border-bottom-color: #e24c47;
+  box-shadow: inset 0 -1px 0 0 #e24c47;
+}
+
+.list-md .item-input.item-input-has-focus:last-child, .list-md .item-input.item-input-has-focus:last-child{
+  border-bottom-color: #e24c47;
+  box-shadow: inset 0 -2px 0 0 #e24c47;  
+}*/
+
+.item-md.item-input.item-input-has-focus .item-inner, .item-md.item-input.item-input-has-focus .item-inner{
+  border-bottom-color: none;
+  box-shadow: none;
+}
+
+.list-md .item-input.item-input-has-focus:last-child, .list-md .item-input.item-input-has-focus:last-child{
+  border-bottom-color: none;
+  box-shadow: none;  
+}
+.list-md[inset] .item:last-child{
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+
+.item.item-block.item-md.item-datetime{
+  padding: 0px;
+}
+
+.item.item-block.item-md.item-select{
+  padding: 0px;
+}
+.text-input.text-input-md{
+text-align: right;
+}
+
+
+
+.item-md.item-input.ng-valid.item-input-has-value:not(.input-has-focus):not(.item-input-has-focus) .item-inner, .item-md.item-input.ng-valid.input-has-value:not(.input-has-focus):not(.item-input-has-focus) .item-inner {
+  border-bottom: none;
+-webkit-box-shadow: none;
+ box-shadow: none;
+}
+
+.item-md-transparent, .item-divider-md-transparent{
+  color:#243343;
+}
+
+.list-md > .item-block:last-child, .list-md > .item-wrapper:last-child .item-block {
+  border-bottom: none;}
+
+//IOS
+
+/*.item-ios.item-input.item-input-has-focus .item-inner, .item-ios.item-input.item-input-has-focus .item-inner{
+  border-bottom-color: #e24c47;
+  box-shadow: inset 0 -1px 0 0 #e24c47;
+}
+
+.list-ios .item-input.item-input-has-focus:last-child, .list-ios .item-input.item-input-has-focus:last-child{
+  border-bottom-color: #e24c47;
+  box-shadow: inset 0 -2px 0 0 #e24c47;  
+}*/
+
+.item-ios.item-input.item-input-has-focus .item-inner, .item-ios.item-input.item-input-has-focus .item-inner{
+  border-bottom-color: none;
+  box-shadow: none;
+}
+
+.list-ios .item-input.item-input-has-focus:last-child, .list-ios .item-input.item-input-has-focus:last-child{
+  border-bottom-color: none;
+  box-shadow: none;  
+}
+.list-ios[inset] .item:last-child{
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+
+.item.item-block.item-ios.item-datetime{
+  padding: 0px;
+}
+
+.item.item-block.item-ios.item-select{
+  padding: 0px;
+}
+.text-input.text-input-ios{
+  text-align: right;
+  }
+
+ .item-ios-transparent, .item-divider-ios-transparent{
+  color:#243343;
+}
+
+.list-ios > .item-block:last-child, .list-ios > .item-wrapper:last-child .item-block {
+  border-bottom: none;}

@@ -1,0 +1,17 @@
+<link href="https://fonts.googleapis.com/css?family=Baumans" rel="stylesheet">
+
+
+<style type="text/css">
+
+.tab-button-text{
+  font-family: 'Baumans', cursive;
+}
+</style>
+
+<ion-tabs selectedIndex="2">
+  <ion-tab  [root]="tab2Root" tabsHideOnSubPages="true" tabTitle="Perfil" tabIcon="happy"></ion-tab>
+  <ion-tab  [root]="tab1Root" tabsHideOnSubPages="true" tabTitle="Mensagens" tabIcon="chatbubbles"></ion-tab>
+  <ion-tab  [root]="tab0Root" tabTitle="Explorar" tabIcon="icon-kantan"></ion-tab>
+  <ion-tab  [root]="tab3Root" tabTitle="Histórico" tabIcon="time"></ion-tab>
+  <ion-tab  [root]="tab4Root" tabTitle="Ajuda" tabIcon="flag"></ion-tab>
+</ion-tabs>

@@ -1,0 +1,9 @@
+page-avaliar-servico {
+
+}
+
+@keyframes esmaecer {from{opacity: 0;} to {opacity: 1;}};
+
+.recomendacao{
+    transition: esmaecer 5s;
+}

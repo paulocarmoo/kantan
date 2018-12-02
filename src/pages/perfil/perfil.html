@@ -1,0 +1,121 @@
+<!--
+  Generated template for the PerfilPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+
+<ion-header class="imgperfil">
+
+  <ion-navbar color="vermelhoperfil">
+      <ion-buttons end>
+          <button (click)="editar()" ion-button icon-only>
+            <ion-icon  name="options"></ion-icon>
+          </button>
+          <button ion-button icon-only>
+            <ion-icon name="log-out"></ion-icon>
+          </button>
+        </ion-buttons>
+      </ion-navbar>
+      
+
+    <ion-item no-lines padding-left style="background: linear-gradient(to right,#e24c47e6, #e24c47);border: none;">
+        <ion-thumbnail large item-start>
+          <img style="width: 90px;height: 90px;border-radius:7px 21px 7px 21px;" src="assets/icones/perfilcli.png">
+        </ion-thumbnail>
+        <h3 style="color:white;font-size: 19px;font-family: 'Baumans',cursive;"><b>Nome do Usuário</b></h3>
+      
+      </ion-item>
+    
+</ion-header>
+
+
+<ion-content class="bodyAreaInterna">  
+  <h2 padding-left>
+    Dados Pessoais
+  </h2>
+  <ion-card class="card">
+  <ion-list>
+    <ion-item class="itemcard">
+      <ion-icon name="calendar" color="preto" item-start></ion-icon>
+      <p floating>Data de Nascimento</p>
+      <h3>00/00/0000</h3>
+    </ion-item>
+  </ion-list>
+  </ion-card>
+  
+
+  <h2 padding-left>
+    Contato
+  </h2>
+
+  <ion-card  class="card">
+    <ion-list>
+
+      <ion-item class="itemcard">
+          <ion-icon name="at" item-start color="verde"></ion-icon>
+        <p floating>Email</p>
+        <h3>email@email.com</h3>
+      </ion-item>
+    
+      <ion-item class="itemcard">
+          <ion-icon name="call" color="rosa" item-start></ion-icon>
+        <p floating>Telefone</p>
+        <h3 type="tel">(99) 99999-9999</h3>
+      </ion-item>
+
+    </ion-list>
+    </ion-card>
+
+
+
+
+  <h2 padding-left>
+    Localização
+  </h2>
+
+  <ion-card class="card">
+    <ion-list>
+
+        <ion-item class="itemcard">
+            <ion-icon name="navigate" color="laranja" item-start></ion-icon>
+          <p floating>Cidade</p>
+          <h3 type="text">São Paulo</h3>
+        </ion-item>
+      
+        <ion-item class="itemcard">
+            <ion-icon name="locate" color="roxo" item-start></ion-icon>
+          <p floating>Bairro</p>
+          <h3 type="text">Centro</h3>
+        </ion-item>
+
+    </ion-list>
+    </ion-card>
+
+  
+
+  <h2 padding-left>
+    Você no Kantan
+  </h2>
+
+  <ion-card class="card">
+    <ion-list>
+
+        <ion-item class="itemcard">
+            <ion-icon name="heart" color="azul" item-start></ion-icon>
+            <p floating>Membro desde</p>
+            <h3 type="text">Setembro de 2018</h3>
+          </ion-item>
+      
+          <ion-item class="itemcard">
+              <ion-icon name="icon-kantan" color="vermelho2" item-start></ion-icon>
+              <p floating>Serviços contratados</p>
+              <h3 type="numeric">25</h3>
+            </ion-item>
+      
+    </ion-list>
+    </ion-card>
+
+  
+  <br>
+</ion-content>

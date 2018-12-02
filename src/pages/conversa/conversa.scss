@@ -1,0 +1,41 @@
+page-conversa {
+
+}
+#mensagem {
+    width: calc(100% - 10px);
+    border: 0;
+    border-radius: 15px 5px 15px 5px;
+    background: transparent;
+}
+
+.balaopro{
+  position: relative;
+    max-width:75%;
+    padding:10px;
+    text-align: left;
+    font-size:15px;
+    border-radius: 2px 10px 10px 10px;
+    background: linear-gradient(to right, #1d7cb6a1, #2b94dd);
+    color: #fbfbfb;
+    margin-right:25%;
+    z-index: 2;
+}
+
+
+
+.balaocli{
+    position: relative;
+    max-width:75%;
+    padding:10px;
+    text-align: left;
+    font-size:15px;
+    border-radius: 10px 10px 2px 10px;
+    background: linear-gradient(141deg, #c3433ec2 0%, #e24c47cf 15%, #e24c47 75%);
+    color:#fbfbfb;
+    margin-left:25%;
+    z-index: 2;
+
+    
+}
+
+
