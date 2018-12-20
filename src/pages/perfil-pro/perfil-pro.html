@@ -17,19 +17,18 @@
 
   <ion-item no-lines padding-left style="background: linear-gradient(to right,#1d7cb6e6, #2b94dd);border: none;">
     <ion-thumbnail large item-start>
-      <img style="width: 90px;height: 90px;border-radius:5px 15px 4px 15px;" src="assets/icones/perfil.png">
+      <img style="width: 90px;height: 90px;border-radius:5px 15px 4px 15px;" src="assets/icones/pedro.png">
     </ion-thumbnail>
-    <h2 style="color:white;font-size: 19px;"><b>@ApelidoProfissional - 5⭐</b></h2>
-    <h2 style="color:white;"><b>Nome Profissional</b></h2>
+    <h2 style="color:white;font-size: 19px;"><b>@pedrosilva - 5⭐</b></h2>
+    <h2 style="color:white;"><b>Pedro Almeida da Silva</b></h2>
 
-    <p><button ion-button small style="font-family: 'Baumans', cursive;background: #e24c47;" class="botoes_inicio"
+    <p><button ion-button small (click)="goToCadastrarServico()" style="font-family: 'Baumans', cursive;background: #e24c47;" class="botoes_inicio"
         round>Novo serviço</button>
-      <button ion-button small style="font-family: 'Baumans', cursive;background: #e24c47;" class="botoes_inicio" round>
+      <button (click)="conversa()" ion-button small style="font-family: 'Baumans', cursive;background: #e24c47;" class="botoes_inicio" round>
         <ion-icon name="chatbubbles"></ion-icon>
       </button></p>
   </ion-item>
-  <p padding-horizontal style="padding-bottom:7px;margin:0px;background: linear-gradient(to right,#1d7cb6e6, #2b94dd);border: none;color:white;">Bio
-    do profissional escrita por ele mesmo com uma quantidade razoável de caracteres.</p>
+  <p padding-horizontal style="padding-bottom:7px;margin:0px;background: linear-gradient(to right,#1d7cb6e6, #2b94dd);border: none;color:white;">Gosto de trabalhar com isso e me sinto feliz com o reconhecimento das pessoas. Espero poder ajudar com o que precisar, para orçamentos só mandar mensagem. </p>
 
 </ion-header>
 <ion-content class="bodyAreaInterna">
@@ -39,25 +38,31 @@
     <ion-item class="itemcard">
       <ion-list>
         <button color="transparent" ion-item>
-          <ion-icon name="radio-button-on" color="preto" item-start></ion-icon>
-          Chaveiro
+          <ion-icon name="icon-azulegista" color="preto" item-start></ion-icon>
+          Azulejista
         </button>
 
         <button color="transparent" ion-item>
-          <ion-icon name="radio-button-on" color="verde" item-start></ion-icon>
+          <ion-icon name="icon-encanador" color="verde" item-start></ion-icon>
           Encanador
         </button>
 
 
         <button color="transparent" ion-item>
-          <ion-icon name="radio-button-on" color="rosa" item-start></ion-icon>
+          <ion-icon name="icon-gesseiro" color="rosa" item-start></ion-icon>
           Gesseiro
         </button>
 
         <button color="transparent" ion-item>
-          <ion-icon name="radio-button-on" color="laranja" item-start></ion-icon>
-          Jardineiro
+          <ion-icon name="icon-gesseiro" color="amarelo" item-start></ion-icon>
+          Pedreiro
         </button>
+
+        <button color="transparent" ion-item>
+          <ion-icon name="icon-marmorista" color="roxo" item-start></ion-icon>
+          Marmorista
+        </button>
+
       </ion-list>
     </ion-item>
   </ion-card>
@@ -71,7 +76,7 @@
         <ion-item class="itemcard">
           <ion-icon name="egg" color="preto" item-start></ion-icon>
           <p floating>Idade</p>
-          <h3>30 anos</h3>
+          <h3>45 anos</h3>
         </ion-item>
       </ion-list>
     </ion-card>
@@ -87,13 +92,13 @@
         <ion-item class="itemcard">
           <ion-icon name="at" item-start color="verde"></ion-icon>
           <p floating>Email</p>
-          <h3>email@email.com</h3>
+          <h3>pedrosilva73@email.com</h3>
         </ion-item>
 
         <ion-item class="itemcard">
           <ion-icon name="call" color="rosa" item-start></ion-icon>
           <p floating>Telefone</p>
-          <h3 type="tel">(99) 99999-9999</h3>
+          <h3 type="tel">(11) 98788-7899</h3>
         </ion-item>
 
       </ion-list>
@@ -118,7 +123,7 @@
         <ion-item class="itemcard">
           <ion-icon name="locate" color="roxo" item-start></ion-icon>
           <p floating>Bairro</p>
-          <h3 type="text">Centro</h3>
+          <h3 type="text">Mooca</h3>
         </ion-item>
 
       </ion-list>
@@ -151,7 +156,7 @@
           <ion-item class="itemcard">
               <ion-icon name="calendar" color="preto" item-start></ion-icon>
               <p floating>Data de início/uso</p>
-              <h3 type="text">00/00/00</h3>
+              <h3 type="text">17/12/2018</h3>
             </ion-item>
 
             <ion-item class="itemcard">
@@ -163,11 +168,11 @@
               <ion-item class="itemcard">
                   <ion-icon name="pricetag" color="laranja" item-start></ion-icon>
                   <p floating>Avaliação</p>
-                  <h3 type="text">5⭐ - Recomendado</h3>
+                  <h3 type="text">Pendente</h3>
                 </ion-item>
 
     <ion-card-content class="itemcard">
-      <p>Um resumo do serviço que o cliete pediu para que ele lembre do serviço de forma fácil.</p>
+      <p>Cano da pia da cozinha estourou.</p>
     </ion-card-content>
   </ion-card>
 
@@ -176,13 +181,13 @@
         <ion-item class="itemcard">
             <ion-icon name="calendar" color="preto" item-start></ion-icon>
             <p floating>Data de início/uso</p>
-            <h3 type="text">00/00/00</h3>
+            <h3 type="text">10/12/2018</h3>
           </ion-item>
 
           <ion-item class="itemcard">
               <ion-icon name="cash" color="verde" item-start></ion-icon>
               <p floating>Valor gasto</p>
-              <h3 type="text">R$ 100,00</h3>
+              <h3 type="text">R$ 200,00</h3>
             </ion-item>
 
             <ion-item class="itemcard">
@@ -192,33 +197,9 @@
               </ion-item>
 
   <ion-card-content class="itemcard">
-    <p>Um resumo do serviço que o cliete pediu para que ele lembre do serviço de forma fácil.</p>
+    <p>Trocar a janela do banheiro de uma das suítes.</p>
   </ion-card-content>
 </ion-card>
 
-<ion-card class="card">
-  
-      <ion-item class="itemcard">
-          <ion-icon name="calendar" color="preto" item-start></ion-icon>
-          <p floating>Data de início/uso</p>
-          <h3 type="text">00/00/00</h3>
-        </ion-item>
-
-        <ion-item class="itemcard">
-            <ion-icon name="cash" color="verde" item-start></ion-icon>
-            <p floating>Valor gasto</p>
-            <h3 type="text">R$ 100,00</h3>
-          </ion-item>
-
-          <ion-item class="itemcard">
-              <ion-icon name="pricetag" color="laranja" item-start></ion-icon>
-              <p floating>Avaliação</p>
-              <h3 type="text">5⭐ - Recomendado</h3>
-            </ion-item>
-
-<ion-card-content class="itemcard">
-  <p>Um resumo do serviço que o cliete pediu para que ele lembre do serviço de forma fácil.</p>
-</ion-card-content>
-</ion-card>
     
   </ion-content>

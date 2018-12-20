@@ -4,14 +4,7 @@ import { ViewChild } from '@angular/core';
 import { Slides } from 'ionic-angular';
 import { TabsPage } from '../tabs/tabs';
 import { ToastController } from 'ionic-angular';
-
-
-/**
- * Generated class for the CriarDadosPessoaisPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
+import { AlertController } from "ionic-angular";
 
 @IonicPage()
 @Component({
@@ -19,6 +12,20 @@ import { ToastController } from 'ionic-angular';
   templateUrl: 'criar-dados-pessoais.html',
 })
 export class CriarDadosPessoaisPage {
+  usuario: string = "";
+  senha: string = "";
+  email: string = "";
+  nome: string = "";
+  sobrenome: string = "";
+  telefone: string = "";
+  cpf: string = "";
+  cidade: string = "";
+  bairro: string = "";
+  nascimento: any;
+  confirmarsenha: string = "";
+  termosecondicoes: boolean = false;
+  user: any;
+
   @ViewChild(Slides) slides: Slides;
 
   public event = {
@@ -26,57 +33,69 @@ export class CriarDadosPessoaisPage {
     timeStarts: '07:43',
     timeEnds: '1990-02-20'
   }
-  constructor(public navCtrl: NavController, public navParams: NavParams, public toastCtrl: ToastController) {
+  constructor(public navCtrl: NavController, public navParams: NavParams,
+    public alertCtrl: AlertController,
+    public toastCtrl: ToastController
+  ) {
   }
 
+
   ionViewDidLoad() {
-    console.log('ionViewDidLoad CriarDadosPessoaisPage');
   }
 
   ngAfterViewInit() {
     this.slides.lockSwipes(true);
-}
-
-proximoslide2(){
-  this.slides.lockSwipeToNext(false);
-  this.slides.slideNext();
-  this.slides.lockSwipeToNext(true);
-}
-
-proximoslide3(){
-  this.slides.lockSwipeToNext(false);
-  this.slides.slideNext();
-  this.slides.lockSwipeToNext(true);
-} 
-
-proximoslide4(){
-  this.slides.lockSwipeToNext(false);
-  this.slides.slideNext();
-  this.slides.lockSwipeToNext(true);
-}
-proximoslide5(){
-  this.slides.lockSwipeToNext(false);
-  this.slides.slideNext();
-  this.slides.lockSwipeToNext(true);
-}
-
-goToTabsPage(position: string){
-  this.navCtrl.push(TabsPage); 
-    let toast = this.toastCtrl.create({
-      message: 'Seja muito bem-vindo(a) ao Kantan',
-      duration: 3000,
-      position: position
-    });
-
-    toast.present(toast);
   }
 
+  proximoslide2() {
+    
+      this.slides.lockSwipeToNext(false);
+      this.slides.slideNext();
+      this.slides.lockSwipeToNext(true);
+    
+  }
+
+  proximoslide3() {
+   
+      this.slides.lockSwipeToNext(false);
+      this.slides.slideNext();
+      this.slides.lockSwipeToNext(true);
+    
+  }
+
+  proximoslide4() {
+    
+      this.slides.lockSwipeToNext(false);
+      this.slides.slideNext();
+      this.slides.lockSwipeToNext(true);
+    
+  }
+  proximoslide5() {
+    
+        this.slides.lockSwipeToNext(false);
+        this.slides.slideNext();
+        this.slides.lockSwipeToNext(true);
+      
+    }
 
 
-voltar(){
-  this.slides.lockSwipeToPrev(false);
-  this.slides.slidePrev();
-  this.slides.lockSwipeToPrev(true);
-}
+
+  validar(position: string) {
+    
+              let toast = this.toastCtrl.create({
+                message: "Seja bem-vindo(a) ao Kantan!",
+                duration: 3000,
+                position: position
+              });
+
+              toast.present(toast);
+              this.navCtrl.push(TabsPage);
+            }
+
+  voltar() {
+    this.slides.lockSwipeToPrev(false);
+    this.slides.slidePrev();
+    this.slides.lockSwipeToPrev(true);
+  }
 
 }

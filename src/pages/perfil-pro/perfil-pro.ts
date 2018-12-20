@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { CadastrarServicoPage } from '../cadastrar-servico/cadastrar-servico';
+import { ConversaPage } from '../conversa/conversa';
 
 /**
  * Generated class for the PerfilProPage page.
@@ -22,4 +24,11 @@ export class PerfilProPage {
     console.log('ionViewDidLoad PerfilProPage');
   }
 
+  goToCadastrarServico(){
+    this.navCtrl.push(CadastrarServicoPage);
+  }
+
+  conversa(){
+    this.navCtrl.push(ConversaPage);
+  }
 }

@@ -37,78 +37,15 @@
         <ion-card-content no-padding class="imgperfil">
           <ion-item (click)="goToPerfilProPage()" no-lines padding-left style="z-index:1;border-radius:5px 15px 4px 15px;box-shadow: none;background: linear-gradient(to right,#1d7cb6e6, #2b94dd);border: none;">
             <ion-thumbnail large item-start>
-              <img style="width: 90px;height: 90px;border-radius:5px 15px 4px 15px;" src="assets/icones/perfil.png">
+              <img style="width: 90px;height: 90px;border-radius:5px 15px 4px 15px;" src="assets/icones/pedro.png">
             </ion-thumbnail>
-            <h2 style="color:white;font-size: 19px;"><b>@ApelidoProfissional - 5⭐</b></h2>
-            <h2 style="color:white;"><b>Nome Profissional</b></h2>
-
-            <p><button ion-button small (click)="cadastrarservico()" class="botao" style="z-index:200;" round>Novo serviço</button>
-              <button ion-button small class="botao" round>
-                <ion-icon name="chatbubbles"></ion-icon>
-              </button></p>
+            <h2 style="color:white;font-size: 19px;"><b>@pedrosilva - 5⭐</b></h2>
+            <h2 style="color:white;"><b>Pedro Almeida da Silva</b></h2>
+            <p><button ion-button small class="botao" style="z-index:200;" round>Ver</button>
           </ion-item>
         </ion-card-content>
       </ion-card>
     </ion-slide>
-
-    <ion-slide (click)="goToPerfilProPage()" style="height: 130px;">
-      <ion-card>
-        <ion-card-content no-padding class="imgperfil">
-          <ion-item no-lines padding-left style="border-radius:5px 15px 4px 15px;box-shadow: none;background: linear-gradient(to right,#1d7cb6e6, #2b94dd);border: none;">
-            <ion-thumbnail large item-start>
-              <img style="width: 90px;height: 90px;border-radius:5px 15px 4px 15px;" src="assets/icones/perfil.png">
-            </ion-thumbnail>
-            <h2 style="color:white;font-size: 19px;"><b>@ApelidoProfissional - 5⭐</b></h2>
-            <h2 style="color:white;"><b>Nome Profissional</b></h2>
-
-            <p><button ion-button small  class="botao" round>Novo serviço</button>
-              <button ion-button small class="botao" round>
-                <ion-icon name="chatbubbles"></ion-icon>
-              </button></p>
-          </ion-item>
-        </ion-card-content>
-      </ion-card>
-    </ion-slide>
-
-    <ion-slide (click)="goToPerfilProPage()" style="height: 130px;">
-      <ion-card>
-        <ion-card-content no-padding class="imgperfil">
-          <ion-item no-lines padding-left style="border-radius:5px 15px 4px 15px;box-shadow: none;background: linear-gradient(to right,#1d7cb6e6, #2b94dd);border: none;">
-            <ion-thumbnail large item-start>
-              <img style="width: 90px;height: 90px;border-radius:5px 15px 4px 15px;" src="assets/icones/perfil.png">
-            </ion-thumbnail>
-            <h2 style="color:white;font-size: 19px;"><b>@ApelidoProfissional - 5⭐</b></h2>
-            <h2 style="color:white;"><b>Nome Profissional</b></h2>
-
-            <p><button ion-button small class="botao" round>Novo serviço</button>
-              <button ion-button small class="botao" round>
-                <ion-icon name="chatbubbles"></ion-icon>
-              </button></p>
-          </ion-item>
-        </ion-card-content>
-      </ion-card>
-    </ion-slide>
-
-    <ion-slide (click)="goToPerfilProPage()" style="height: 130px;">
-      <ion-card>
-        <ion-card-content no-padding class="imgperfil">
-          <ion-item no-lines padding-left style="border-radius:5px 15px 4px 15px;box-shadow: none;background: linear-gradient(to right,#1d7cb6e6, #2b94dd);border: none;">
-            <ion-thumbnail large item-start>
-              <img style="width: 90px;height: 90px;border-radius:5px 15px 4px 15px;" src="assets/icones/perfil.png">
-            </ion-thumbnail>
-            <h2 style="color:white;font-size: 19px;"><b>@ApelidoProfissional - 5⭐</b></h2>
-            <h2 style="color:white;"><b>Nome Profissional</b></h2>
-
-            <p><button ion-button small class="botao" round>Novo serviço</button>
-              <button ion-button small class="botao" round>
-                <ion-icon name="chatbubbles"></ion-icon>
-              </button></p>
-          </ion-item>
-        </ion-card-content>
-      </ion-card>
-    </ion-slide>
-
-
   </ion-slides>
 
 
@@ -120,74 +57,97 @@
     <ion-card-header class="itemcard">
       Serviços
     </ion-card-header>
-      <ion-list class="itemcard" padding>
+    <ion-list class="itemcard" padding>
 
-        <button (click)="explorarservico()" color="transparent" ion-item>
-          <ion-icon name="icon-azulegista" color="vermelho2" item-start></ion-icon>
-          Azulejista
-        </button>
+      <button (click)="explorarservico('Azulejista', 'Especialista em assentar azulejos e pisos. Com esse profissional as paredes e o chão ganham o acabamento perfeito.')"
+        color="transparent" ion-item>
+        <ion-icon name="icon-azulegista" color="vermelho2" item-start></ion-icon>
+        Azulejista
+      </button>
 
-        <button color="transparent" ion-item>
-          <ion-icon name="icon-chaveiro" color="preto" item-start></ion-icon>
-          Chaveiro
-        </button>
+      <button (click)="explorarservico('Chaveiro', 'Cuida de trancas e chaves. Com esse profissional seu ambiente estará seguro.')"
+        color="transparent" ion-item>
+        <ion-icon name="icon-chaveiro" color="preto" item-start></ion-icon>
+        Chaveiro
+      </button>
 
-        <button color="transparent" ion-item>
-          <ion-icon name="icon-eletricista" color="azul" item-start></ion-icon>
-          Eletricista
-        </button>
+      <button (click)="explorarservico('Eletricista', 'Faz instalações e manutenções elétricas.  Com esse profissional a eletricidade circulará na sua casa.
+        ')"
+        color="transparent" ion-item>
+        <ion-icon name="icon-eletricista" color="azul" item-start></ion-icon>
+        Eletricista
+      </button>
 
-        <button color="transparent" ion-item>
-          <ion-icon name="icon-encanador" color="verde" item-start></ion-icon>
-          Encanador
-        </button>
+      <button (click)="explorarservico('Encanador', 'Faz todo o trabalho com canos. Com esse profissional o essencial para vida, a água, tem os devidos caminhos.
+        ')"
+        color="transparent" ion-item>
+        <ion-icon name="icon-encanador" color="verde" item-start></ion-icon>
+        Encanador
+      </button>
 
 
-        <button color="transparent" ion-item>
-          <ion-icon name="icon-gesseiro" color="rosa" item-start></ion-icon>
-          Gesseiro
-        </button>
+      <button (click)="explorarservico('Gesseiro', 'Tudo com gesso. Com esse profissional suas paredes vão ficar lisinhas e o teto com um desenho bonito.
+        ')"
+        color="transparent" ion-item>
+        <ion-icon name="icon-gesseiro" color="rosa" item-start></ion-icon>
+        Gesseiro
+      </button>
 
-        <button color="transparent" ion-item>
-          <ion-icon name="icon-jardineiro" color="laranja" item-start></ion-icon>
-          Jardineiro
-        </button>
+      <button (click)="explorarservico('Jardineiro', 'Cuida da parte de fora (ou dentro) da sua casa, o jardim. Com esse profissional sua casa ganha vida.')"
+        color="transparent" ion-item>
+        <ion-icon name="icon-jardineiro" color="laranja" item-start></ion-icon>
+        Jardineiro
+      </button>
 
-        <button color="transparent" ion-item>
-          <ion-icon name="icon-marceneiro" color="roxo" item-start></ion-icon>
-          Marceneiro
-        </button>
+      <button (click)="explorarservico('Marceneiro', 'Produz móveis e estruturas em madeira. Com esse profissional tudo terá o corte certo.
+        ')"
+        color="transparent" ion-item>
+        <ion-icon name="icon-marceneiro" color="roxo" item-start></ion-icon>
+        Marceneiro
+      </button>
 
-        <button color="transparent" ion-item>
-          <ion-icon name="icon-marmoeiro" color="amarelho" item-start></ion-icon>
-          Marmorista
-        </button>
+      <button (click)="explorarservico('Marmorista', 'Faz os cortes, instala e dá manutenção em mármores. Com esse profissional tem a aplicação sem igual.
+        ')"
+        color="transparent" ion-item>
+        <ion-icon name="icon-marmorista" color="amarelho" item-start></ion-icon>
+        Marmorista
+      </button>
 
-        <button color="transparent" ion-item>
-          <ion-icon name="icon-pedreiro" color="vermelho2" item-start></ion-icon>
-          Pedreiro
-        </button>
+      <button (click)="explorarservico('Pedreiro', 'Constrói quase tudo. Com esse profissional seus projetos ganham estrutura e saem de papel.
+        ')"
+        color="transparent" ion-item>
+        <ion-icon name="icon-pedreiro" color="vermelho2" item-start></ion-icon>
+        Pedreiro
+      </button>
 
-        <button color="transparent" ion-item>
-          <ion-icon name="icon-pintor" color="preto" item-start></ion-icon>
-          Pintor
-        </button>
+      <button (click)="explorarservico('Pintor', 'Encarregado pelas tintas. Com esse profissional sua casa ganha vida com cores.
+        ')"
+        color="transparent" ion-item>
+        <ion-icon name="icon-pintor" color="preto" item-start></ion-icon>
+        Pintor
+      </button>
 
-        <button color="transparent" ion-item>
-          <ion-icon name="icon-serralheiro" color="azul" item-start></ion-icon>
-          Serralheiro
-        </button>
+      <button (click)="explorarservico('Serralheiro', 'Especializado em fabricar construções metálicas. Com esse profissional qualquer metal é papel.
+        ')"
+        color="transparent" ion-item>
+        <ion-icon name="icon-serralheiro" color="azul" item-start></ion-icon>
+        Serralheiro
+      </button>
 
-        <button color="transparent" ion-item>
-          <ion-icon name="icon-telhadista" color="verde" item-start></ion-icon>
-          Telhadista
-        </button>
+      <button (click)="explorarservico('Telhadista', 'Responsável por vários tipos de telhado. Com esse profissional sua casa estará protegida do sol e da chuva.
+        ')"
+        color="transparent" ion-item>
+        <ion-icon name="icon-telhadista" color="verde" item-start></ion-icon>
+        Telhadista
+      </button>
 
-        <button color="transparent" ion-item>
-          <ion-icon name="icon-vidraceiro" color="rosa" item-start></ion-icon>
-          Vidraceiro
-        </button>
+      <button (click)="explorarservico('Vidraceiro', 'Experiente em vidros. Com esse profissional seus ambientes ganham luz natural.
+        ')"
+        color="transparent" ion-item>
+        <ion-icon name="icon-vidraceiro" color="rosa" item-start></ion-icon>
+        Vidraceiro
+      </button>
 
-      </ion-list>
+    </ion-list>
   </ion-card>
 </ion-content>

@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { ExplorarPage } from '../explorar/explorar';
 
 import { ToastController } from 'ionic-angular';
+import { TabsPage } from '../tabs/tabs';
 
 /**
  * Generated class for the AvaliarServicoPage page.
@@ -18,7 +18,7 @@ import { ToastController } from 'ionic-angular';
 })
 export class AvaliarServicoPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams,public toastCtrl: ToastController) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public toastCtrl: ToastController) {
   }
 
   ionViewDidLoad() {
@@ -27,22 +27,23 @@ export class AvaliarServicoPage {
 
   public tap: string = "👍 Recomendado";
   tapEvent(e) {
-    if(this.tap =="👍 Recomendado"){
-    this.tap="👎 Não Recomendado";}
-    else{
-    this.tap="👍 Recomendado";
+    if (this.tap == "👍 Recomendado") {
+      this.tap = "👎 Não Recomendado";
+    }
+    else {
+      this.tap = "👍 Recomendado";
     }
   }
 
+  salvaravaliacao(position: string) {
+    this.navCtrl.push(TabsPage);
+    let toast = this.toastCtrl.create({
+      message: 'Obrigado pela avaliação! 👍',
+      duration: 2000,
+      position: position
+    });
 
-  salvaravaliacao(position: string){
-    this.navCtrl.push(ExplorarPage); 
-      let toast = this.toastCtrl.create({
-        message: 'Obrigado pela avaliação',
-        duration: 2000,
-        position: position
-      });
-  
-      toast.present(toast);
-    }
+    toast.present(toast);
+  }
+
 }

@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { ConversaPage } from '../conversa/conversa';
-
+import { AlertController } from "ionic-angular";
 /**
  * Generated class for the MensagensPage page.
  *
@@ -16,15 +16,14 @@ import { ConversaPage } from '../conversa/conversa';
 })
 export class MensagensPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public alertCtrl: AlertController) {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad MensagensPage');
   }
 
-  goToConversaPage(){
-    this.navCtrl.push(ConversaPage); 
+  goToConversaPage() {
+    this.navCtrl.push(ConversaPage);
   }
 
 }

@@ -9,10 +9,10 @@
 <ion-header>
   <ion-navbar color="transparent" style="padding:0px;background: #24334321;">
     <ion-title padding style="color: #243343 ;font-family: 'Baumans',cursive;font-size: 28px;">
-      Azulejista
+      
     </ion-title>
     <p padding-horizontal padding-bottom style="color: #243343;font-size: 17px;margin: 0px;">
-      Uma breve explicação de como é o serviço e o que o profissional pode fazer pelo cliente.
+      {{descricao}}
     </p>
   </ion-navbar>
 </ion-header>
@@ -23,7 +23,7 @@
     <ion-item color="transparent">
       <ion-icon name="compass" color="vermelho2" item-start></ion-icon>
       <ion-label color="preto">Localização</ion-label>
-      <ion-select [(ngModel)]="Localizacao" interface="action-sheet" cancelText="Deixar como está">
+      <ion-select disabled="true" [(ngModel)]="Localizacao" interface="action-sheet" cancelText="Deixar como está">
         <ion-option selected="true">Mesma cidade</ion-option>
         <ion-option>Mesmo bairro</ion-option>
       </ion-select>
@@ -32,7 +32,7 @@
     <ion-item color="transparent">
       <ion-icon name="swap" color="azul" item-start></ion-icon>
       <ion-label color="preto">Classificação</ion-label>
-      <ion-select [(ngModel)]="Classificacao" interface="action-sheet" cancelText="Deixar como está">
+      <ion-select disabled="true" [(ngModel)]="Classificacao" interface="action-sheet" cancelText="Deixar como está">
           <ion-option>Nome</ion-option>
           <ion-option>Avaliação</ion-option>
           <ion-option>Tempo no Kantan</ion-option>
@@ -41,67 +41,17 @@
   </ion-list>
 
 
-  <ion-card>
+  <ion-card (click)="goToPerfilProPage()">
     <ion-card-content no-padding class="imgperfil">
       <ion-item no-lines padding-left style="border-radius:5px 15px 0px 0px;box-shadow: none;background: linear-gradient(to right,#1d7cb6e6, #2b94dd);border: none;">
         <ion-thumbnail large item-start>
-          <img style="width: 90px;height: 90px;border-radius:5px 15px 4px 15px;" src="assets/icones/perfil.png">
+          <img style="width: 90px;height: 90px;border-radius:5px 15px 4px 15px;" src="assets/icones/pedro.png">
         </ion-thumbnail>
-        <h2 style="color:white;font-size: 19px;"><b>@ApelidoProfissional - 5⭐</b></h2>
-        <h2 style="color:white;"><b>Nome Profissional</b></h2>
+        <h2 style="color:white;font-size: 19px;"><b>@pedrosilva - 5⭐</b></h2>
+        <h2 style="color:white;"><b>Pedro Almeida da Silva</b></h2>
 
       </ion-item>
-      <p padding-horizontal style="padding-bottom:7px;margin:0px;background: linear-gradient(to right,#1d7cb6e6, #2b94dd);border: none;color:white;">Bio
-        do profissional escrita por ele mesmo com uma quantidade razoável de caracteres.</p>
-    </ion-card-content>
-  </ion-card>
-
-  <ion-card>
-    <ion-card-content no-padding class="imgperfil">
-      <ion-item no-lines padding-left style="border-radius:5px 15px 0px 0px;box-shadow: none;background: linear-gradient(to right,#1d7cb6e6, #2b94dd);border: none;">
-        <ion-thumbnail large item-start>
-          <img style="width: 90px;height: 90px;border-radius:5px 15px 4px 15px;" src="assets/icones/perfil.png">
-        </ion-thumbnail>
-        <h2 style="color:white;font-size: 19px;"><b>@ApelidoProfissional - 5⭐</b></h2>
-        <h2 style="color:white;"><b>Nome Profissional</b></h2>
-
-
-      </ion-item>
-      <p padding-horizontal style="padding-bottom:7px;margin:0px;background: linear-gradient(to right,#1d7cb6e6, #2b94dd);border: none;color:white;">Bio
-        do profissional escrita por ele mesmo com uma quantidade razoável de caracteres.</p>
-    </ion-card-content>
-  </ion-card>
-
-
-
-  <ion-card>
-    <ion-card-content no-padding class="imgperfil">
-      <ion-item no-lines padding-left style="border-radius:5px 15px 0px 0px;box-shadow: none;background: linear-gradient(to right,#1d7cb6e6, #2b94dd);border: none;">
-        <ion-thumbnail large item-start>
-          <img style="width: 90px;height: 90px;border-radius:5px 15px 4px 15px;" src="assets/icones/perfil.png">
-        </ion-thumbnail>
-        <h2 style="color:white;font-size: 19px;"><b>@ApelidoProfissional - 5⭐</b></h2>
-        <h2 style="color:white;"><b>Nome Profissional</b></h2>
-
-      </ion-item>
-      <p padding-horizontal style="padding-bottom:7px;margin:0px;background: linear-gradient(to right,#1d7cb6e6, #2b94dd);border: none;color:white;">Bio
-        do profissional escrita por ele mesmo com uma quantidade razoável de caracteres.</p>
-    </ion-card-content>
-  </ion-card>
-
-
-  <ion-card>
-    <ion-card-content no-padding class="imgperfil">
-      <ion-item no-lines padding-left style="border-radius:5px 15px 0px 0px;box-shadow: none;background: linear-gradient(to right,#1d7cb6e6, #2b94dd);border: none;">
-        <ion-thumbnail large item-start>
-          <img style="width: 90px;height: 90px;border-radius:5px 15px 4px 15px;" src="assets/icones/perfil.png">
-        </ion-thumbnail>
-        <h2 style="color:white;font-size: 19px;"><b>@ApelidoProfissional - 5⭐</b></h2>
-        <h2 style="color:white;"><b>Nome Profissional</b></h2>
-
-      </ion-item>
-      <p padding-horizontal style="padding-bottom:7px;margin:0px;background: linear-gradient(to right,#1d7cb6e6, #2b94dd);border: none;color:white;">Bio
-        do profissional escrita por ele mesmo com uma quantidade razoável de caracteres.</p>
+      <p padding-horizontal style="padding-bottom:7px;margin:0px;background: linear-gradient(to right,#1d7cb6e6, #2b94dd);border: none;color:white;">Gosto de trabalhar com isso e me sinto feliz com o reconhecimento das pessoas. Espero poder ajudar com o que precisar, para orçamentos só mandar mensagem.</p>
     </ion-card-content>
   </ion-card>
 </ion-content>

@@ -2,35 +2,41 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { OpcoesInicialPage } from '../opcoes-inicial/opcoes-inicial';
 import { EdicaoPerfilPage } from '../edicao-perfil/edicao-perfil';
-
-/**
- * Generated class for the PerfilPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
+import { ToastController } from 'ionic-angular';
 
 @IonicPage()
 @Component({
   selector: 'page-perfil',
   templateUrl: 'perfil.html',
 })
-export class PerfilPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
-  }
+export class PerfilPage {
+  nome: string;
+  sobrenome: string;
+  email: string;
+  telefone: string;
+  cidade: string;
+  bairro: string;
+  cpf: string;
+  perfil:any;
+
+  constructor(public navCtrl: NavController, public navParams: NavParams,private toast: ToastController) { 
+    
+     }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad PerfilPage');
+  } 
+
+  sair(position: string) {
+  
+        this.navCtrl.push(OpcoesInicialPage);
+        this.toast.create({
+          message: 'Esperamos ver você novamente!', duration: 3000, position: position
+    
+      })
   }
 
-  sair(){
-    this.navCtrl.push(OpcoesInicialPage); 
+  editar() {
+  this.navCtrl.push(EdicaoPerfilPage);
   }
- 
-  editar(){
-    this.navCtrl.push(EdicaoPerfilPage); 
-  }
-
-
 }

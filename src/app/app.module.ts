@@ -46,17 +46,13 @@ import { BrMaskerModule } from "brmasker-ionic-3";
 
 import { ReactiveFormsModule } from "@angular/forms";
 
-import { AngularFireModule } from "angularfire2";
-import { AngularFireAuth } from "angularfire2/auth";
-import { firebaseConfig } from "../config";
-import { AuthService } from "../services/auth.service";
+
 
 @NgModule({
   declarations: [MyApp, AboutPage, ContactPage, HomePage, TabsPage],
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp, { tabsHideOnSubPages: true }),
-    AngularFireModule.initializeApp(firebaseConfig.fire),
     ExplorarPageModule,
     PerfilPageModule,
     MensagensPageModule,
@@ -103,9 +99,7 @@ import { AuthService } from "../services/auth.service";
   providers: [
     StatusBar,
     SplashScreen,
-    { provide: ErrorHandler, useClass: IonicErrorHandler },
-    AngularFireAuth,
-    AuthService
+    {provide: ErrorHandler, useClass: IonicErrorHandler },
   ]
 })
 export class AppModule {}

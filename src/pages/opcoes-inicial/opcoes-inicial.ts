@@ -5,14 +5,6 @@ import { CriarDadosPessoaisPage } from '../criar-dados-pessoais/criar-dados-pess
 import { ViewChild } from '@angular/core';
 import { Slides } from 'ionic-angular';
 
-
-/**
- * Generated class for the OpcoesInicialPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
-
 @IonicPage()
 @Component({
   selector: 'page-opcoes-inicial',
@@ -23,10 +15,13 @@ export class OpcoesInicialPage {
   @ViewChild(Slides) slides: Slides;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+
+    
   }
 
+  
+
   ionViewDidLoad() {
-    console.log('ionViewDidLoad OpcoesInicialPage');
   }
 
   goToLoginPage(){

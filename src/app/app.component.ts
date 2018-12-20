@@ -3,20 +3,8 @@ import { Platform } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { OpcoesInicialPage } from '../pages/opcoes-inicial/opcoes-inicial';
-import * as firebase from 'firebase';
 
 
-
-
-export const environment = {
-  production: false,
-  apiKey: 'AIzaSyA7Kxdms4ui1fL8a3ZWMzeekKeI8nxBhsw',
-  authDomain: 'kantan-f8740.firebaseapp.com',
-  databaseURL: 'https://kantan-f8740.firebaseio.com',
-  projectId: 'kantan-f8740',
-  storageBucket: 'kantan-f8740.appspot.com',
-  messagingSenderId: "388290850656",
-};
 
 @Component
 ({

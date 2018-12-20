@@ -1,57 +1,45 @@
-<!--
-  Generated template for the TelaLoginPage page.
-
-  See http://ionicframework.com/docs/components/#navigation for more info on
-  Ionic pages and navigation.
--->
-
-
-
+<html class="imgLogin">
 <link href="https://fonts.googleapis.com/css?family=Baumans" rel="stylesheet">
 <ion-header>
 
   <ion-navbar color="vermelho">
-    <ion-title class="navInitial" style="font-family: 'Baumans',cursive;font-size: 28px;">Área de Login</ion-title>
+
+    <ion-title class="navInitial" style="font-family: 'Baumans',cursive;font-size: 28px;">Área de acesso</ion-title>
   </ion-navbar>
 
 </ion-header>
 
-<ion-content class="imgLogin">
+<ion-content class="body-login">
+  <div style="padding-top: 150px;">
+    <table style="width:95%; margin: auto;">
+      <tbody>
+        <tr>
+          <td class="tdlogin">
 
-
-  <body class="body-login">
-    <div style="padding-top: 150px;">
-      <table style="width:95%; margin: auto;">
-        <tbody>
-          <tr>
-            <td class="tdlogin">
-
-              <ion-list inset>
-                <br><br>
-                <ion-item style="background:#f4f6f3;">
-                  <ion-label style="background:#f4f6f3;">E-mail</ion-label>
-                  <ion-input style="background:#f4f6f3;" type="text" id="email"
-                    name="email" [(ngModel)]="email" maxlength="50"></ion-input>
-                </ion-item>
-
-
-                <ion-item style="background:#f4f6f3;">
-                  <ion-label style="background:#f4f6f3;">Senha</ion-label>
-                  <ion-input style="background:#f4f6f3;" type="password" id="senha" name="senha" maxlength="32"
-                    [(ngModel)]="senha"></ion-input>
-                </ion-item>
-
-
-              </ion-list>
-              <br>
-              <button ion-button large (click)="goToTabsPage('top')" style="width:60%;text-align:right;font-family: 'Baumans', cursive;background:#e24c47;"
-                color="vermelho" round>Entrar</button><br>
-              <button ion-button round outline small (click)="goToEsqueciSenhaPage()" color="vermelho">esqueci a senha</button>
+            <ion-list inset>
               <br><br>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  </body>
+              <ion-item style="background:#f4f6f3;">
+                <ion-label style="background:#f4f6f3;">E-mail</ion-label>
+                <ion-input style="background:#f4f6f3;" type="text" placeholder="alanturing@email.com"></ion-input>
+              </ion-item>
+
+
+              <ion-item style="background:#f4f6f3;">
+                <ion-label style="background:#f4f6f3;">Senha</ion-label>
+                <ion-input style="background:#f4f6f3;" type="password" placeholder="************"></ion-input>
+              </ion-item>
+
+
+            </ion-list>
+            <br>
+            <button ion-button large (click)="goToTabsPage('top')" style="width:60%;text-align:right;font-family: 'Baumans', cursive;background:#e24c47;"
+              color="vermelho" round>Entrar</button><br>
+            <button ion-button round outline small (click)="esqueciSenha()" color="vermelho">esqueci a senha</button>
+            <br><br>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 </ion-content>
+</html>

@@ -3,7 +3,6 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { ViewChild } from '@angular/core';
 import { Slides } from 'ionic-angular';
 import { ToastController } from 'ionic-angular';
-import { HistoricoPage } from '../historico/historico';
 import { TabsPage } from '../tabs/tabs';
 
 /**

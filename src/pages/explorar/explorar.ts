@@ -18,6 +18,8 @@ import { CadastrarServicoPage } from '../cadastrar-servico/cadastrar-servico';
   templateUrl: 'explorar.html',
 })
 export class ExplorarPage {
+  descricao: string;
+  servico: string;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
@@ -33,8 +35,8 @@ export class ExplorarPage {
     this.navCtrl.push(PerfilProPage); 
   }
 
-  explorarservico(){
-    this.navCtrl.push(ExplorarServicosPage); 
+  explorarservico(servico: string, descricao:string){
+    this.navCtrl.push(ExplorarServicosPage, {servico: servico, descricao: descricao} ); 
   }
 
   cadastrarservico(){
